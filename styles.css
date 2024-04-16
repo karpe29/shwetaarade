@@ -186,13 +186,13 @@ html, body {
 #menu {
     width: 50%; /* Set the menu width to 50% of the viewport width */
     position: fixed;
-    top: 0;
+    top: -50px;
     left: 50%; /* Position the left edge of the menu at the center of the viewport */
     transform: translateX(-50%); /* Shift the menu leftwards by 50% of its own width to center it */
     display: flex;
     justify-content: space-between; /* Distributes the space evenly between the menu items */
     align-items: center;
-    background: white;
+    background: rgba(255, 255, 255, 0);
     color: rgb(40, 40, 40);
     padding: 10px 20px;
     box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
