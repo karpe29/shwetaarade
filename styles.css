@@ -1,0 +1,296 @@
+/* styles.css */
+/* html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+.fullscreen-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    width: 100vw; 
+    background: #f0f0f0; 
+}
+
+
+.centered-logo {
+    max-width: 30vw; 
+    max-height: 30vh; 
+    width: auto;
+    height: auto; 
+} */
+
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('/GraphikBlack.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Graphik';
+    src: url('/GraphikThin.otf') format('opentype');
+    font-weight: 100;
+    font-style: thin;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('/GraphikBlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('/GraphikBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('/GraphikBoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Repeat the pattern for each weight and style */
+@font-face {
+    font-family: 'Graphik';
+    src: url('/GraphikExtralight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+
+/* styles.css */
+/* styles.css */
+html, body {
+    font-family: 'Graphik', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scroll bar */
+}
+
+.fullscreen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(4, 0, 255); /* Full-screen starts with a blue background */
+    cursor: pointer; /* Indicates the element is clickable */
+    position: fixed; /* Ensures the div remains properly placed */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    border-radius: 0%;  /* Starts as a rectangle */
+
+    transform: translate(-50%, -50%); /* Adjust positioning for centering */
+}
+
+
+
+/* .fullscreen-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 0%; /* Starts as a full rectangle 
+} */
+
+/* #text {
+    font-size: 20px;
+    color: #0400ff;
+    position: fixed;
+    top: 48.6%;
+    font-weight: 100;
+    left: 50.2%;
+    margin-left: 10px;
+    white-space: nowrap;
+    
+} */
+
+
+
+#container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensures centered content */
+    cursor: pointer;
+}
+
+.circle {
+    background-color: blue;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    width: 150vmax;
+    height: 150vmax;
+    cursor: url('white-click-cursor.png'), auto;
+}
+
+.viewMenu{
+    top: 0 !important;;
+}
+
+#text {
+    font-size: 16px;
+    color: white;
+    display: none; /* Initially hidden */
+    position: absolute; /* Allows for specific placement */
+    white-space: nowrap;
+    opacity: 0; /* Start fully transparent */
+}
+
+#text {
+    display: none; /* Initially hide text */
+    font-size: 20px;
+    font-weight: 100;
+    color: #0400ff;
+    margin-left: 1px; /* Space between the circle and the text */
+    display: none; /* Initially hidden */
+    position: absolute;
+    white-space: nowrap;
+    opacity: 0; /* Start fully transparent */
+
+}
+
+/* #menu {
+    font-size: 1em;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: -50px;
+    left: 0;
+    right: 0;
+    background: white;
+    color: rgb(40, 40, 40);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    transition: top 0.5s ease-in-out;
+} */
+
+#menu {
+    width: 50%; /* Set the menu width to 50% of the viewport width */
+    position: fixed;
+    top: 0;
+    left: 50%; /* Position the left edge of the menu at the center of the viewport */
+    transform: translateX(-50%); /* Shift the menu leftwards by 50% of its own width to center it */
+    display: flex;
+    justify-content: space-between; /* Distributes the space evenly between the menu items */
+    align-items: center;
+    background: white;
+    color: rgb(40, 40, 40);
+    padding: 10px 20px;
+    box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
+    transition: top 0.5s ease-in-out;
+}
+
+#menu-left { padding-left: 10px; }
+#menu-center { text-align: center; flex-grow: 1; } /* Ensure center alignment */
+#menu-right { padding-right: 10px; }
+
+
+
+/* Work.html */
+
+.dot-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-top: 4em;
+}
+
+.dot-wrapper {
+    flex: 1; /* Ensures equal division of space */
+    display: flex;
+    justify-content: center; /* Centers the dot horizontally */
+    position: relative; /* Context for positioning text */
+    align-items: center; /* Centers the dot vertically */
+    height: 60px; /* Adjust height as needed */
+}
+
+.dot {
+    width: 25px;
+    height: 25px;
+    background-color: grey;
+    border-radius: 50%; /* Makes the dot circular */
+    transition: background-color 0.3s ease;
+}
+
+.dot-text {
+    position: absolute;
+    bottom: -20px; /* Adjust distance below the dot */
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+    font-size: 1.4em;
+    font-weight: 400;
+    color: rgb(40, 40, 40);
+}
+
+.dot-wrapper:hover .dot {
+    background-color: rgb(4, 0, 255); /* Color changes on hover */
+}
+
+.dot-wrapper:hover .dot-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.scrollable-container {
+    width: 90%;
+    max-height: 900px;
+    margin: 50px auto; /* Centers the div and adds vertical spacing */
+    overflow-x: hidden; /* Enables horizontal scrolling */
+    overflow-y: scroll; /* Disables vertical scrolling */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.scrollable-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders don't double up */
+    table-layout: fixed; /* Helps in maintaining equal column widths */
+}
+
+td {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 3px solid rgb(40, 40, 40,0.5);
+    border-bottom: 3px solid rgb(40, 40, 40,0.5);
+    text-align: left; /* Default text alignment */
+    width: 33.333%; /* Divides the table into three equal parts */
+    font-size: 1.2em;
+    font-weight: 400;
+    color: rgb(40, 40, 40);
+}
+
+td.center-align {
+    text-align: center;
+}
+
+td.right-align {
+    text-align: right;
+}
