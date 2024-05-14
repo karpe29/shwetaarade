@@ -8,15 +8,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 <body>
+    <header id="menu" style="position: relative; top:-58px;">
+            <div class="logo">
+                <span style="font-size: 90px; color: rgb(4, 0, 255); margin-top: -5px;">•</span>
+                <span style="font-size: 14px; color: rgb(40, 40, 40);">One Blue Dot</span>
+              <!-- <img src="path_to_logo.png" alt="One Blue Dot Logo" style="height: 50px;"> Adjust the logo path and size as needed -->
+            </div>
+            <nav class="menu">
+              <a href="/about.html">ABOUT</a>
+              <a href="/work.html">WORK</a>
+              <a href="/contact.html">CONTACT</a>
+            </nav>
+          </header>
     <div id="container">
         <div class="circle" id="shrinkable"></div>
-        <span id="text">ne blue dot</span>
     </div> 
-    <div id="menu">
-        <div id="menu-left">ABOUT</div>
-        <div id="menu-center">PROJECTS</div>
-        <div id="menu-right">CONTACT</div>
-    </div>
+    
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -34,7 +41,7 @@
                 ease: "power2.in",
                 onComplete: function() {
                     // Once the circle has shrunk, handle the text and menu animations
-                    textElement.style.display = 'block'; // Make the text visible for animation
+                    // textElement.style.display = 'block'; // Make the text visible for animation
                     gsap.fromTo(textElement, {
                         opacity: 0,
                         x: 0 // Starts at the center
@@ -45,6 +52,7 @@
                         ease: "power3.out"
                     });
                     // Slide down the menu
+                    // menu.style.display = 'flex';
                     gsap.to(menu, {
                         top: 0, // Bring the menu to view
                         duration: 0.5,

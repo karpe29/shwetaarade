@@ -7,28 +7,40 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
+
 <body>
-    
-    <div id="menu" class="viewMenu">
+    <header>
+        <div class="logo">
+            <span style="font-size: 90px; color: rgb(4, 0, 255); margin-top: -5px;">•</span>
+            <span style="font-size: 14px; color: rgb(40, 40, 40);">One Blue Dot</span>
+          <!-- <img src="path_to_logo.png" alt="One Blue Dot Logo" style="height: 50px;"> Adjust the logo path and size as needed -->
+        </div>
+        <nav class="menu">
+            <a href="/about.html">ABOUT</a>
+            <a href="/work.html">WORK</a>
+            <a href="/contact.html">CONTACT</a>
+        </nav>
+      </header>
+    <!-- <div id="menu" class="viewMenu">
         <div id="menu-left">ABOUT</div>
         <div id="menu-center">PROJECTS</div>
         <div id="menu-right">CONTACT</div>
-    </div>
+    </div> -->
     <div class="dot-container">
         <div class="dot-wrapper" data-dot="dot1">
-            <div class="dot"></div>
+            <div class="circle_dot">●</div>
             <span class="dot-text">Architecture</span>
         </div>
         <div class="dot-wrapper" data-dot="dot2">
-            <div class="dot"></div>
+            <div class="circle_dot">●</div>
             <span class="dot-text">Interior</span>
         </div>
         <div class="dot-wrapper" data-dot="dot3">
-            <div class="dot"></div>
+            <div class="circle_dot">●</div>
             <span class="dot-text">Landscape</span>
         </div>
         <div class="dot-wrapper" data-dot="dot4">
-            <div class="dot"></div>
+            <div class="circle_dot">●</div>
             <span class="dot-text">Research</span>
         </div>
     </div>
@@ -76,13 +88,13 @@ document.querySelectorAll('.dot-wrapper').forEach(function(dot) {
     dot.addEventListener('mouseover', function() {
         // Remove active class and hide text for all dots
         document.querySelectorAll('.dot-wrapper').forEach(function(otherDot) {
-            otherDot.querySelector('.dot').style.backgroundColor = 'grey'; // Reset color
+            otherDot.querySelector('.circle_dot').style.color = 'black'; // Reset color
             otherDot.querySelector('.dot-text').style.opacity = '0'; // hide text
             otherDot.querySelector('.dot-text').style.visibility = 'hidden';
         });
 
         // Set this dot as active
-        this.querySelector('.dot').style.backgroundColor = 'rgb(4, 0, 255)'; // Change color to blue
+        this.querySelector('.circle_dot').style.color = 'rgb(4, 0, 255)'; // Change color to blue
         this.querySelector('.dot-text').style.opacity = '1'; // Show text
         this.querySelector('.dot-text').style.visibility = 'visible';
 
